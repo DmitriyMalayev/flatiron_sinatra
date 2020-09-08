@@ -16,7 +16,6 @@ class ApplicationController < Sinatra::Base
     erb :"/applications/index.html" 
   end
 
-
   # not_found do 
   #   flash[:error] = "Sorry, can't find that route"
   #   redirect "/applications" 

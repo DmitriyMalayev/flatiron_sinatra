@@ -1,7 +1,7 @@
 <h1><%= @application.title %></h1>
 <p><%= @application.description %></p>
 <p><%= @application.github_link %></p>
-<% if authorize_application(@app) %>
+<% if authorize_application(@application) %>
   <div>
     <a href="/applications/<%= @application.id %>/edit"><button>Edit</button></a> 
     <form method="post" action="/applications/<%= @application.id %>" style="display: inline-block;">
