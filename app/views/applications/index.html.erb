@@ -1,4 +1,5 @@
 <h1>List Of Applications</h1>
-<% @app.each do |post| %>
-<p><a href="/applications/<%= app.id %>"><%= app.title %></a></p>
+<% @applications.each do |application| %>
+<p><a href="/applications/<%= application.id %>"><%= application.title %></a></p>
 <% end %>
+

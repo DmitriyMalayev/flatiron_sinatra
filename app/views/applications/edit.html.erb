@@ -1,27 +1,27 @@
 <h1>Edit Application Info</h1>
-<% if @app.errors.any? %>
+<% if @application.errors.any? %>
   <div id="error_explanation">
-    <h2><%= @app.errors.count %> error(s) prohibited this post from being saved:</h2>
+    <h2><%= @application.errors.count %> error(s) prohibited this post from being saved:</h2>
     <ul>
-    <% @app.errors.full_messages.each do |message| %>
+    <% @application.errors.full_messages.each do |message| %>
       <li><%= message %></li>
     <% end %>
     </ul>
   </div>
 <% end %>
-<form method="post" action="/applications/<%= @app.id %>">
+<form method="post" action="/applications/<%= @application.id %>">
   <input type="hidden" name="_method" value="patch" />
   <p>
     <div><label for="application_title">Application Title</label></div>
-    <input type="text" id="application_title" name="application[title]" value="<%= @app.title %>" />
+    <input type="text" id="application_title" name="application[title]" value="<%= @application.title %>" />
   </p>
   <p>
     <div><label for="application_description">Application's Description</label></div>
-    <textarea rows="10" cols="30" id="application_description" type="text" name="application[description]"><%= @app.description %></textarea>
+    <textarea rows="10" cols="30" id="application_description" type="text" name="application[description]"><%= @application.description %></textarea>
   </p>
   <p>
     <div><label for="github_link">Github Link</label></div>
-    <input type="url" id="github_link" name="application[github_link]" value="<%= @app.github_link %>">
+    <input type="url" id="github_link" name="application[github_link]" value="<%= @application.github_link %>">
   </p>
   <input type="submit" value="Update Application" />
 </form>

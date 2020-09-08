@@ -1,10 +1,10 @@
-<h1><%= @app.title %></h1>
-<p><%= @app.description %></p>
-<p><%= @app.github_link %></p>
+<h1><%= @application.title %></h1>
+<p><%= @application.description %></p>
+<p><%= @application.github_link %></p>
 <% if authorize_application(@app) %>
   <div>
-    <a href="/applications/<%= @app.id %>/edit"><button>Edit</button></a> 
-    <form method="post" action="/applications/<%= @app.id %>" style="display: inline-block;">
+    <a href="/applications/<%= @application.id %>/edit"><button>Edit</button></a> 
+    <form method="post" action="/applications/<%= @application.id %>" style="display: inline-block;">
       <input type="hidden" name="_method" value="delete" />
       <input type="submit" value="Delete" />
     </form>
