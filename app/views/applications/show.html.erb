@@ -1,1 +1,23 @@
-<h1>This is the show page for an individual instance of your model.</h1>
+<h1><%= @app.title %></h1>
+<p><%= @app.author.email %></p>
+<p><%= @app.content %></p>
+<% if authorize_app(@app) %>
+  <div>
+    <a href="/applications/<%= @app.id %>/edit"><button>Edit</button></a> 
+    <form method="post" action="/applications/<%= @app.id %>" style="display: inline-block;">
+      <input type="hidden" name="_method" value="delete" />
+      <input type="submit" value="Delete" />
+    </form>
+  </div>
+<% end %>
+
+
+
+get "/applications/:id/edit" do  #EDIT 
+erb :"/applications/edit.html"
+end
+
+get "/applications/:id" do  #SHOW 
+set_application  
+erb :"/applications/show.html"
+end

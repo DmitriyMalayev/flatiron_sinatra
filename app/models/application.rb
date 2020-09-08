@@ -3,7 +3,5 @@ class Application < ActiveRecord::Base
     validates :dev_id, presence: true 
     validates :title, presence: true, uniqueness: true 
     validates :description, presence: true
-    validates :github_link, presence: true if include?("git")
-    end
-
+    validates :github_link, presence: true #if include?("git")
 end
