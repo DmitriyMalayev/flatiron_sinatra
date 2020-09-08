@@ -1,1 +1,4 @@
-<h1>This is the Model's index page.</h1>
+<h1>List Of Applications</h1>
+<% @app.each do |post| %>
+<p><a href="/applications/<%= app.id %>"><%= app.title %></a></p>
+<% end %>

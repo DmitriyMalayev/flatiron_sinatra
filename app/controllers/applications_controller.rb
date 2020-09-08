@@ -22,7 +22,6 @@ class ApplicationsController < ApplicationController
       end
     end 
 
-
   get "/applications/:id" do  #SHOW 
     set_application  
     erb :"/applications/show.html"
@@ -46,10 +45,8 @@ class ApplicationsController < ApplicationController
     end 
   end 
  
-
-
   delete "/applications/:id" do  #DESTROY
-    set_post 
+    set_application 
     redirect_if_not_authorized
     @app.destroy   
     redirect "/applications"
@@ -69,13 +66,13 @@ class ApplicationsController < ApplicationController
 
     def redirect_if_not_authorized
       redirect_if_not_logged_in 
-      if !authorize_app(@app)
+      if !authorize_application(@app)
         flash[:error] = "You don't have permission to do this action."
         redirect "/applications"
       end 
     end 
 
-    def authorize_app(app)
+    def authorize_application(app)
       current_user == app.developer 
     end 
 

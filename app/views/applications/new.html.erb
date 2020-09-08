@@ -1,16 +1,16 @@
 <h1>About Your Application</h1>
 <form method="post" action="/applications">
   <p>
-    <div><label for="app_title">App Title</label></div>
-    <input type="text" id="app_title" name="app[title]" value="<%= @app.title %>" />
+    <div><label for="application_title">Application Title</label></div>
+    <input type="text" id="application_title" name="application[title]" value="<%= @app.title %>" />
   </p>
   <p>
-    <div><label for="Description">App's Description</label></div>
-    <textarea rows="10" cols="30" id="app_description" type="text" name="app[description]"><%= @app.description %></textarea>
+    <div><label for="application_description">Application's Description</label></div>
+    <textarea rows="10" cols="30" id="application_description" type="text" name="application[description]"><%= @app.description %></textarea>
   </p>
   <p>
   <div><label for="github_link">Github Link</label></div>
-  <input type="url" id="github_link" name="app[github_link]">
+  <input type="url" id="github_link" name="application[github_link]" value="<%= @app.github_link %>">
 </p>
 <input type="submit" value="Submit App"> 
 </form>
