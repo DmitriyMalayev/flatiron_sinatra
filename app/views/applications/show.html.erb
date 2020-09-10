@@ -1,6 +1,8 @@
 <h1><%= @application.title %></h1>
 <p><%= @application.description %></p>
-<p><%= @application.github_link %></p>
+<p><a href="<%= @application.github_link %>">Github Link</a> 
+</p>
+
 <% if authorize_application(@application) %>
   <div>
     <a href="/applications/<%= @application.id %>/edit"><button>Edit</button></a> 

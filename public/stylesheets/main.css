@@ -12,13 +12,20 @@
   }
 
   /* --- Welcome Page Styles --- */
-  body {
+  body { 
+    background-image: url("https://pixabay.com/get/52e0d3414e56a514f6d1867dda2c347e1636d6e24e5074407c297ad6914bc1_1920.jpg");
+    background-size: cover;
     background-color: lightblue;
     color: #333;
     font-family: Sans-Serif;
     line-height: 18px;
   }
-
+/* 
+  div {
+    background-image:url('w3css.gif');
+    background-repeat:no-repeat;
+    background-size:cover;
+} */
 
   .error {
     color: red;
@@ -27,9 +34,7 @@
   .success {
     color: rgb(0, 190, 10);
   }
-
-
-
+  
   .wrapper {
     background: #fff;
     -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);

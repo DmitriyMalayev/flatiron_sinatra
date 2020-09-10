@@ -1,6 +1,6 @@
 class ApplicationsController < ApplicationController
 
-  get "/applications" do   #INDEX 
+  get "/applications" do   #INDEX    
     @applications = Application.all 
     erb :"/applications/index.html"
   end

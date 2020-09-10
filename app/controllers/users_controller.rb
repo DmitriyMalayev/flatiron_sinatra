@@ -15,3 +15,7 @@ class UsersController < ApplicationController
   end
 end
 
+#Provides a form for a User to make an account 
+#Uses validations to check if all fields are properly filled out 
+#Doesn't save if validations don't pass 
+#Assigns session[:id] based on the User's id 

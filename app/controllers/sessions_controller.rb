@@ -14,5 +14,10 @@ class SessionsController < ApplicationController
             erb :"/sessions/login"
         end 
     end
-
 end 
+
+#Provides the ability for the User to Log In 
+#Checks if such a user exists 
+#Authenticates the user 
+#Uses the User's id to assign the session[:id]   (if authentication successful)
+  
