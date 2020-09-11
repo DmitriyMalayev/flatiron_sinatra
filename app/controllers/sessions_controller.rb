@@ -1,10 +1,10 @@
 class SessionsController < ApplicationController 
 
-    get "/login" do 
+    get "/login" do  #Renders User Log In Form 
         erb :"/sessions/login"
     end 
 
-    post "/login" do 
+    post "/login" do  #Uses above info 
         developer = User.find_by_username(:dev_username)
         if developer && developer.authenticate(params[:password])
             session[:id] = developer[:id]

@@ -1,10 +1,10 @@
 class UsersController < ApplicationController
 
-  get "/users/new" do 
+  get "/users/new" do    #Form for a new User / Developer 
     erb :"users/new" 
   end 
 
-  post '/users' do 
+  post '/users' do   #Form Submission 
     @user = User.new(dev_username: params[:dev_username], password: params[:password])
     if @user.save
       session[:id] = @user.id
