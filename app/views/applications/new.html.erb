@@ -1,18 +1,28 @@
-<h1>About Your Application</h1>
+<h1>New Application</h1>
+
+<% if @application.errors.any? %>
+  <div id="error_explanation">
+    <h2> <%= @application.errors.count %> error(s) prohibited this post from being saved: </h2>
+    <ul>
+    <% @application.errors.full_messages.each do |message| %> 
+        <li><%= message  %> </li>
+    <% end%>
+    </ul>
+  </div>
+<% end%> 
+
 <form method="post" action="/applications">
   <p>
-    <div><label for="application_title">Application Title</label></div>
-    <input type="text" id="application_title" name="application[title]" value="<%= @application.title %>" />
+    <div><label for="title">Application Title</label></div>
+    <input type="text" id="title" name="application[title]" value="<%= @application.title %>" />
   </p>
   <p>
-    <div><label for="application_description">Application's Description</label></div>
-    <textarea rows="10" cols="30" id="application_description" type="text" name="application[description]"><%= @application.description %></textarea>
+    <div><label for="description">Application's Description</label></div>
+    <textarea rows="10" cols="30" id="description" type="text" name="application[description]"><%= @application.description %></textarea>
   </p>
   <p>
   <div><label for="github_link">Github Profile Link</label></div>
   <input type="url" id="github_link" name="application[github_link]" value="<%= @application.github_link %>">
-</p>
+  </p>
 <input type="submit" value="Submit App"> 
 </form>
-
-

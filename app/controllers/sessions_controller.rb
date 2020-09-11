@@ -1,11 +1,11 @@
 class SessionsController < ApplicationController 
 
-    get "/login" do  #Renders User Log In Form 
+    get "/login" do  
         erb :"/sessions/login"
     end 
 
-    post "/login" do  #Uses above info 
-        developer = User.find_by_username(:dev_username)
+    post "/login" do 
+        developer = User.find_by(dev_username: params[:dev_username])
         if developer && developer.authenticate(params[:password])
             session[:id] = developer[:id]
             redirect "/"
@@ -14,10 +14,10 @@ class SessionsController < ApplicationController
             erb :"/sessions/login"
         end 
     end
+
+    delete "/logout" do 
+        session.clear 
+        redirect "/"
+    end 
 end 
 
-#Provides the ability for the User to Log In 
-#Checks if such a user exists 
-#Authenticates the user 
-#Uses the User's id to assign the session[:id]   (if authentication successful)
-  

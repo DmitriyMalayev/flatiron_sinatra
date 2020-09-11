@@ -9,6 +9,7 @@
     </ul>
   </div>
 <% end %>
+
 <form method="post" action="/applications/<%= @application.id %>">
   <input type="hidden" name="_method" value="patch" />
   <p>
@@ -18,6 +19,7 @@
   <p>
     <div><label for="application_description">Application's Description</label></div>
     <textarea rows="10" cols="30" id="application_description" type="text" name="application[description]"><%= @application.description %></textarea>
+<input type="text">
   </p>
   <p>
     <div><label for="github_link">Github Link</label></div>
@@ -25,4 +27,3 @@
   </p>
   <input type="submit" value="Update Application" />
 </form> 
-
