@@ -3,7 +3,8 @@ class Application < ActiveRecord::Base
     validates :dev_id, presence: true 
     validates :title, presence: true, uniqueness: true 
     validates :description, presence: true
-    validates :github_link, presence: true #if include?("git")
+    validates :github_link, format: { with: /^https:\/\/github\.com/, 
+        message: "must be a github link" }
 end
 
 
