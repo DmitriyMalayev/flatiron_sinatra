@@ -12,11 +12,12 @@ gem 'pry'
 gem 'bcrypt'
 gem 'tux'
 gem 'sinatra-flash'
-gem 'htmlbeautifier'
+
 
 group :development, :test do 
   gem 'dotenv'
   gem 'session_secret_generator'
+  gem 'htmlbeautifier'
 end
 
 group :test do

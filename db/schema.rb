@@ -17,9 +17,9 @@ ActiveRecord::Schema.define(version: 20200907214300) do
     t.string   "title"
     t.text     "description"
     t.string   "github_link"
-    t.integer  "dev_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "developer_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "users", force: :cascade do |t|

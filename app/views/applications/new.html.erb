@@ -2,7 +2,7 @@
 
 <% if @application.errors.any? %>
   <div id="error_explanation">
-    <h2> <%= @application.errors.count %> error(s) prohibited this post from being saved: </h2>
+    <h2> <%= @application.errors.count %> error(s) prohibited this application from being saved: </h2>
     <ul>
     <% @application.errors.full_messages.each do |message| %> 
         <li><%= message  %> </li>
@@ -25,4 +25,4 @@
   <input type="url" id="github_link" name="application[github_link]" value="<%= @application.github_link %>">
   </p>
 <input type="submit" value="Submit App"> 
-</form>
+</form>  

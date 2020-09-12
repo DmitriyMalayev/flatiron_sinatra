@@ -4,7 +4,7 @@ class CreateApplications < ActiveRecord::Migration
       t.string :title
       t.text :description
       t.string :github_link
-      t.integer :dev_id
+      t.integer :developer_id
 
       t.timestamps null: false
     end
