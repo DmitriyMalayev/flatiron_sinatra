@@ -1,15 +1,15 @@
 <h1><%= @application.title %></h1>
 <p><%= @application.developer.dev_username %></p>
 <p><%= @application.description %></p>
-<p><a href="<%= @application.github_link %>">Github Profile Link</a> 
+<p><a href="<%= @application.github_link %>">Github Profile Link</a>
 </p>
-
 <% if authorize_application(@application) %>
   <div>
-    <a href="/applications/<%= @application.id %>/edit"><button>Edit</button></a> 
-    <form method="post" action="/applications/<%= @application.id %>" style="display: inline-block;">
+    <a href="/applications/<%= @application.id %>/edit"><button>Edit</button></a>
+    <form method="post" action="/applications/<%= @application.id %>"
+    style="display: inline-block;">
       <input type="hidden" name="_method" value="delete" />
       <input type="submit" value="Delete" />
     </form>
   </div>
-<% end %> 
+<% end %>

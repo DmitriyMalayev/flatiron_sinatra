@@ -11,3 +11,5 @@ Dotenv.load if ENV["SINATRA-ENV"] != "development"
  
 require './app/controllers/application_controller'
 require_all 'app' 
+
+#Does this need to go on top 

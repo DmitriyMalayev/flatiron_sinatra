@@ -12,7 +12,7 @@ gem 'pry'
 gem 'bcrypt'
 gem 'tux'
 gem 'sinatra-flash'
-
+gem 'htmlbeautifier'
 
 group :development, :test do 
   gem 'dotenv'
